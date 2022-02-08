@@ -12,27 +12,28 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
-
+// 30min
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
+
     @Provides
     @Singleton
-    fun providesTodoDatabase(app:Application) : TodoDatabase {
-     return  Room.databaseBuilder(
-         app,
-         TodoDatabase::class.java,
-         "todo_db"
-     ).build()
+
+    fun providesTodoDatabase(app: Application): TodoDatabase {
+
+        return Room.databaseBuilder(
+            app,
+            TodoDatabase::class.java,
+            "todo_db"
+        ).build()
+
     }
 
-
     @Provides
     @Singleton
-
-    fun provideTodoRepository(db: TodoDatabase) : TodoRepository{
+    fun provideTodoRepository(db: TodoDatabase): TodoRepository {
         return TodoRepositoryImpl(db.dao)
     }
-
 }
