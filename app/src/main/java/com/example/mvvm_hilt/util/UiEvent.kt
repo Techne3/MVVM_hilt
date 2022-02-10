@@ -1,6 +1,7 @@
 package com.example.mvvm_hilt.util
 
 sealed class UiEvent {
+
     object  PopBackStack: UiEvent()
 
     data class  Navigate (val route: String) : UiEvent()
@@ -10,5 +11,7 @@ sealed class UiEvent {
         val action : String? = null
 
     ):UiEvent()
+
+
 
 }
