@@ -12,7 +12,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
-// 30min
+
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {

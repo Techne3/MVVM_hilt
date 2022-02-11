@@ -9,7 +9,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.plcoding.mvvmtodoapp"
+        applicationId "com.example.mvvm_hilt"
         minSdk 26
         targetSdk 31
         versionCode 1
